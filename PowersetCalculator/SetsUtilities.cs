@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -42,10 +42,8 @@ namespace PowersetCalculator
             var indices = Enumerable.Range(0, k).ToArray();
 
             var subsets = new List<int[]>();
-            //subsets.Add(set.Subset(indices));
             yield return set.Subset(indices);
 
-            ///var done = false;
             while (true)
             {
                 //Find the next index to update, starting from the 
@@ -72,10 +70,7 @@ namespace PowersetCalculator
                 }
 
                 yield return set.Subset(indices);
-                //subsets.Add(set.Subset(indices));
             }
-
-            //return subsets;
         }
 
         /// <summary>
